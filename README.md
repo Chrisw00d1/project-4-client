@@ -20,9 +20,9 @@
 
 <a name="overview"></a>
 ## Overview
-This was the final project we were given as a pair and we had 7 days to build a full stack website. We decided to use create an app that allows users to share tunes that they create with each other.
+This was the final project we were given as a pair and we had 7 days to build a full stack website. Guy and I decided that we wanted to do something involving music. We created an app that allows users to share tunes that they make with each other.
 
-You can try it out [here](https://note-it-down-net.netlify.app/).
+You can try it out [here](https://note-it-down-net.netlify.app/)
 
 The backend can be seen [here](https://github.com/Chrisw00d1/project-4-server)
 
@@ -56,7 +56,7 @@ After we decided that we wanted to make a music making app, we worked on plannin
 
 ![](/src/images/screenshot1.png)
 
-While planning, Guy said that he wanted to focus on the backend to begin with while I found a library we could use and how we could implement it to start. We did the majority of the work together on zoom so that we could help each other out if needed and to understand what the other person was doing. Before we ended the call each day, we made plans for what we wanted to do the next day and if we needed to spend extra time on our own to work on something that had been more challenging than we originally planned.
+While planning, Guy said that he wanted to focus on the backend to begin with while I found a library we could use and how we could implement it to start. We did the majority of the work together on Zoom so that we could help each other out if needed and to understand what the other person was doing. Before we ended the call each day, we made plans for what we wanted to do the next day and if we needed to spend extra time on our own to work on something that had been more challenging than we originally planned.
 
 <a name="backend"></a>
 ## Backend
@@ -123,7 +123,7 @@ class SongDetailView(APIView):
 
 <a name="frontend"></a>
 ## Frontend
-When Guy joined me here I had created the grid for that has the ability to start and stop a song with the ability to change the notes and tempo while it is playing. To setup the grid We used a PolySynth for the synthesiser and changed the scale to C major. While working on setting up the grid I produced a hook that allowed us to fill a grid with all the notes required set to off. This way when we get the data from a song we can just spread the notes object over it.
+When Guy joined me here I had created the grid for that has the ability to start and stop a song with the ability to change the notes and tempo while it is playing. To setup the grid we used a PolySynth for the synthesiser and changed the scale to C major. While working on setting up the grid I produced a hook that allowed us to fill a grid with all the notes required set to off. This way when we get the data from a song we can just spread the notes object over it.
 
 ```js
 export default function noNotes() {
@@ -163,7 +163,7 @@ const repeat = (time) => {
 }
 ```
 
-Once we had that working and tested that we could save songs and view them using the inbuilt Django admin feature, we split up again. Guy worked on the Song Index page and the Song expanded page while I worked on the login, register, nav and other functionalities of the app. Guy decided the theme for our app should be minimalist with frosted glass effect that looked like an IOS. 
+Once we had that working and tested that we could save songs and view them using the inbuilt Django admin feature, we split up again. Guy worked on the Song Index page and the Song expanded page while I worked on the login, register, nav and other functionalities of the app. Guy decided the theme for our app should be minimalist with frosted glass effect that looked like an iOS. 
 
 Once I created the nav I noticed that the song would keep playing when changing to different pages of the app. To solve this I read into the documentation of how scheduleRepeat works and that each time it is run it has a unique ID to be able to stop it. So I added a feature to the nav that stopped the repeatSchedule that was playing whenever the location pathname changed. I also set up a similar system for the index page so that playing different songs did not overlap and break the app.
 
@@ -251,7 +251,7 @@ The win for this project is that it feels complete. We achieved everything we wa
 <a name="lessons"></a>
 ## Lessons learned
 Despite getting Tone.js to work in this project it proved very difficult to get it working in the way that we wanted it to work. There are still cases where the app still breaks when the user clicks too many buttons on the grid or the user creates  spends too long on the app. We realise that we needed to spend more time learning how the library works and that we couldn’t get it working exactly how we wanted.
-We also learnt that having a project that was fun to work on made it easier top work on as well as us both wanting to spend time to work on . 
+We also learnt that having a project that was fun to work on made it easier top work on as well as us both wanting to spend time to work on. 
 
 <a name="future"></a>
 ## Future Improvements
